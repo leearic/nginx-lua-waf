@@ -114,7 +114,7 @@ cp -r nginx-lua-waf /usr/local/openresty/nginx/conf
 vi /usr/local/openresty/nginx/conf/nginx.conf
 在http级别添加以下内容:
     #nginx-lua-waf配置
-    lua_package_path "/usr/local/openresty/nginx/conf/nginx-lua-waf/?.lua;";
+    lua_package_path "/usr/local/openresty/nginx/conf/nginx-lua-waf/?.lua;;";
     lua_shared_dict limit 100m;
     #开启lua代码缓存功能
     lua_code_cache on;
